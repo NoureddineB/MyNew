@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/checkbox_container"
+    android:orientation="vertical">
+
+    <include
+
+        android:id="@+id/include5"
+        layout="@layout/toolbar_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/edit_query"
+        android:layout_width="346dp"
+        android:layout_height="43dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:hint="Search query term"
+        android:inputType="textFilter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include5" />
+
+    <CheckBox
+        android:id="@+id/ArtsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/BusinessCheckBox"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:text="Arts"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/PoliticsCheckBox" />
+
+    <CheckBox
+        android:id="@+id/BusinessCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Business"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ArtsCheckBox" />
+
+    <CheckBox
+        android:id="@+id/EntrepreneursCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/ArtsCheckBox"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:text="Entrepreneurs"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/BusinessCheckBox" />
+
+    <CheckBox
+        android:id="@+id/PoliticsCheckBox"
+        android:layout_width="106dp"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/SportsCheckBox"
+        android:layout_alignTop="@+id/ArtsCheckBox"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="60dp"
+        android:text="Politics"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/search_begin_date" />
+
+    <CheckBox
+        android:id="@+id/SportsCheckBox"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/BusinessCheckBox"
+        android:layout_marginTop="24dp"
+        android:text="Sports"
+        app:layout_constraintStart_toStartOf="@+id/PoliticsCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/PoliticsCheckBox" />
+
+    <CheckBox
+        android:id="@+id/TravelCheckBox"
+        android:layout_width="93dp"
+        android:layout_height="wrap_content"
+
+        android:layout_alignStart="@+id/SportsCheckBox"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="24dp"
+        android:text="Travel"
+        app:layout_constraintStart_toStartOf="@+id/SportsCheckBox"
+        app:layout_constraintTop_toBottomOf="@+id/SportsCheckBox" />
+
+    <Button
+        android:id="@+id/buttonSearch"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="68dp"
+        android:layout_marginEnd="8dp"
+        android:background="@color/colorPrimary"
+        android:text="Search"
+        android:textColor="@color/White"
+        app:layout_constraintEnd_toEndOf="@+id/edit_query"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EntrepreneursCheckBox" />
+
+
+    <EditText
+        android:id="@+id/search_begin_date"
+        android:layout_width="137dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="24dp"
+        android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+        android:hint="Begin Date"
+        android:inputType="date"
+        android:onClick="getDate"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.95"
+        app:layout_constraintStart_toEndOf="@+id/search_end_date"
+        app:layout_constraintTop_toTopOf="@+id/search_end_date" />
+
+
+    <EditText
+        android:id="@+id/search_end_date"
+        android:layout_width="126dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="24dp"
+        android:drawableEnd="@drawable/ic_arrow_drop_down_black_24dp"
+        android:onClick="getDate"
+        android:hint="End Date"
+        android:inputType="date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_query" />
+
+
+</android.support.constraint.ConstraintLayout>
